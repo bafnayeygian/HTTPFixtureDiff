@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "httpfixturediff"
+version = "1.0.0"
+description = "Compare saved HTTP response fixtures and detect status, header, JSON body-shape, and contract drift between versions."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "HTTPFixtureDiff contributors"}]
+
+[project.scripts]
+http-fixture-diff = "http_fixture_diff.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/bafnayeygian/HTTPFixtureDiff"
+Issues = "https://github.com/bafnayeygian/HTTPFixtureDiff/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
